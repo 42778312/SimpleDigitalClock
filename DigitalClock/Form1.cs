@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace DigitalClock
 {
     public partial class digitalClock : Form
+        
     {
+        private DateTime startTime;
         public digitalClock()
         {
             InitializeComponent();
@@ -24,17 +26,7 @@ namespace DigitalClock
 
         private void DigitalClock_load(object sender, EventArgs e)
         {
-            clockTimer.Start();
-        }
-
-        private void redButton_Click(object sender, EventArgs e)
-        {
-            clockLabel.ForeColor = Color.White;
-        }
-
-        private void digitalClock_Load_1(object sender, EventArgs e)
-        {
-
+            //clockTimer.Start(); //  this Section later 
         }
 
         private void whiteButton_Click(object sender, EventArgs e)
@@ -56,6 +48,27 @@ namespace DigitalClock
         private void yellowButton_Click(object sender, EventArgs e)
         {
             clockLabel.ForeColor = Color.Yellow;
+        }
+
+        
+
+        private void stopTimer_Click(object sender, EventArgs e)
+        {
+            clockTimer.Stop();
+        }
+
+        private void startTimer_Click(object sender, EventArgs e)
+        { // set a valur to satrt time & start the time ;)
+            clockTimer.Start();
+            
+        }
+
+        private void resetTimer_Click(object sender, EventArgs e)
+        {
+            clockTimer.Stop();
+            clockLabel.Text = "00:00:00";
+
+
         }
     }
 }
