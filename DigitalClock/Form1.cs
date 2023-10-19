@@ -60,12 +60,14 @@ namespace DigitalClock
         private void startTimer_Click(object sender, EventArgs e)
         { // set a valur to satrt time & start the time ;)
             clockTimer.Start();
+            dateLabel.Text = DateTime.Now.ToLongDateString();
             
         }
 
         private void resetTimer_Click(object sender, EventArgs e)
         {
             clockTimer.Stop();
+            dateLabel.Text = null;
             clockLabel.Text = "00:00:00";
 
 
@@ -76,6 +78,11 @@ namespace DigitalClock
             MaximizeBox = false;
             MinimizeBox = false;
             
+        }
+
+        private void dateLabel_Click(object sender, EventArgs e)
+        {
+            //clockLabel.Text = DateTime.Now.ToString("DD:MM:YYYY");
         }
     }
 }
