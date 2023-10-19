@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(875, 493);
+            this.ClientSize = new System.Drawing.Size(882, 493);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
@@ -152,9 +152,12 @@
             this.Controls.Add(this.whiteButton);
             this.Controls.Add(this.clockLabel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "digitalClock";
             this.Text = "digitalClock";
-           
+            this.Load += new System.EventHandler(this.digitalClock_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

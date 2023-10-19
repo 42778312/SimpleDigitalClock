@@ -70,5 +70,12 @@ namespace DigitalClock
 
 
         }
+
+        private void digitalClock_Load_1(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+            
+        }
     }
 }
